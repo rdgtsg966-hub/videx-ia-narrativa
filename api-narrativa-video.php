@@ -1,6 +1,15 @@
 <?php
 
-header("Content-Type: application/json");
+header("Content-Type: application/json; charset=utf-8");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Max-Age: 86400");
+
+if (($_SERVER["REQUEST_METHOD"] ?? "") === "OPTIONS") {
+  http_response_code(204);
+  exit;
+}
 
 $OPENAI_API_KEY = "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";
 
