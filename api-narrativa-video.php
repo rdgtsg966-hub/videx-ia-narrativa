@@ -2,7 +2,7 @@
 
 header("Content-Type: application/json");
 
-$OPENAI_API_KEY = "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";
+$OPENAI_API_KEY = "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";
 
 if (!$OPENAI_API_KEY) {
     echo json_encode([
